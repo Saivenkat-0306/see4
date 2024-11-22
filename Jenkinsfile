@@ -20,8 +20,8 @@ pipeline {
                         }
                     }
                     '''
-                    sh 'javac HelloWorld.java'
-                    sh 'java HelloWorld'
+                    bat 'javac HelloWorld.java'
+                    bat 'java HelloWorld'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
                     writeFile file: pythonFile, text: '''
                     print("Hello from Python!")
                     '''
-                    sh 'python3 hello.py'
+                    bat 'python3 hello.py'
                 }
             }
         }
