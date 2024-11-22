@@ -28,14 +28,11 @@ pipeline {
 
         stage('Job 3: Execute Python Program') {
             steps {
-                script {
-                    def pythonFile = 'hello.py'
-                    writeFile file: pythonFile, text: '''
-                    print("Hello from Python!")
-                    '''
-                    bat 'python3 hello.py'
-                }
-            }
+               script {
+                   writeFile file: 'hello.py', text: 'print("Hello from Python!")'
+                   bat 'python hello.py'
+                      }
+                   }
         }
     }
 
